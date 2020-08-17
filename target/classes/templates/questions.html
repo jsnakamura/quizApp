@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>Quiz Application</title>
+</head>
+
+<body>
+	<div class="container">
+
+		<header>
+			<div class="pull-left">Quiz Application</div>
+		</header>
+
+		<main>
+			<form action="#" th:action="@{/quiz/answer}" th:object="${answers}"
+				method="POST">
+				<div>
+					<p th:text="'1. ' + ${questions.get(0).question} + ':'" />
+					<ol type ="a">
+						<li><input name="q1" type="radio" th:field="*{questionA}"
+							value="1" /> <label th:text="${questions.get(0).option1}"></label></li>
+						<li><input name="q1" type="radio" th:field="*{questionA}"
+							value="2" /> <label th:text="${questions.get(0).option2}"></label></li>
+						<li><input name="q1" type="radio" th:field="*{questionA}"
+							value="3" /> <label th:text="${questions.get(0).option3}"></label></li>
+						<li><input name="q1" type="radio" th:field="*{questionA}"
+							value="4" /> <label th:text="${questions.get(0).option4}"></label></li>
+					</ol>
+				</div>
+				<div>
+					<p th:text="'2. ' + ${questions.get(1).question} + ':'"/>
+					<ol type ="a">
+						<li><input name="q2" type="radio" th:field="*{questionB}"
+							value="1" /> <label th:text="${questions.get(1).option1}"></label></li>
+						<li><input name="q2" type="radio" th:field="*{questionB}"
+							value="2" /> <label th:text="${questions.get(1).option2}"></label></li>
+						<li><input name="q2" type="radio" th:field="*{questionB}"
+							value="3" /> <label th:text="${questions.get(1).option3}"></label></li>
+						<li><input name="q2" type="radio" th:field="*{questionB}"
+							value="4" /> <label th:text="${questions.get(1).option4}"></label></li>
+					</ol>
+				</div>
+				<div>
+					<p th:text="'3. ' + ${questions.get(2).question} + ':'" />
+					<ol type ="a">
+						<li><input name="q3" type="radio" th:field="*{questionC}"
+							value="1" /> <label th:text="${questions.get(2).option1}"></label></li>
+						<li><input name="q3" type="radio" th:field="*{questionC}"
+							value="2" /> <label th:text="${questions.get(2).option2}"></label></li>
+						<li><input name="q3" type="radio" th:field="*{questionC}"
+							value="3" /> <label th:text="${questions.get(2).option3}"></label></li>
+						<li><input name="q3" type="radio" th:field="*{questionC}"
+							value="4" /> <label th:text="${questions.get(2).option4}"></label></li>
+					</ol>
+				</div>
+				<div>
+					<p th:text="'4. ' + ${questions.get(3).question} + ':'" />
+					<ol type ="a">
+						<li><input name="q4" type="radio" th:field="*{questionD}"
+							value="1" /> <label th:text="${questions.get(3).option1}"></label></li>
+						<li><input name="q4" type="radio" th:field="*{questionD}"
+							value="2" /> <label th:text="${questions.get(3).option2}"></label></li>
+						<li><input name="q4" type="radio" th:field="*{questionD}"
+							value="3" /> <label th:text="${questions.get(3).option3}"></label></li>
+						<li><input name="q4" type="radio" th:field="*{questionD}"
+							value="4" /> <label th:text="${questions.get(3).option4}"></label></li>
+					</ol>
+				</div>
+				<button type="submit">Save</button>
+			</form>
+
+		</main>
+	</div>
+</body>
+
+</html>
